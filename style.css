@@ -3,7 +3,11 @@
   --root-font-size: 1rem;
 
   /* Spacing */
-  --space: 8px;
+  --space-xxs: 8px;
+  --space-xs: 16px;
+  --space-sm: 24px;
+  --space-md: 32px;
+  --space-lg: 48px;
 
   /* Colors */
   --primary: hsl(160deg, 100%, 30%);
@@ -20,6 +24,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  line-height: 1.5;
 }
 
 html,
@@ -31,16 +36,37 @@ body {
 }
 
 /* Add styles here! */
+
+/* Header */
+header {margin-top: var(--space-md);}
+
+.intro-chunk {padding: var(--space-sm);}
+
+/* Main */
 main {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
   background-color: var(--snow);
   border-top: 5px solid var(--dark-snow);
 }
+
 .max-width-wrapper {
-  max-width: 50vw;
+  max-width: 630px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .card {
-  padding: calc(var(--space) * 3);
+  padding: var(--space-sm);
   background-color: var(--white);
+  border-bottom: 5px solid var(--dark-snow);
+}
+
+.indented-heading {
+  display: inline-block;
+  margin-top: calc(var(--space-xs) * -1);
+  margin-left: calc(var(--space-md) * -1);
+  padding: var(--space-xs) var(--space-md);
+  background-color: var(--secondary-light);
+  border-bottom: 5px solid var(--secondary-dark);
 }
