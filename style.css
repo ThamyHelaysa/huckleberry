@@ -57,15 +57,20 @@ main {
 }
 
 .card {
-  padding: var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) var(--space-xxs);
   background-color: var(--white);
   border-bottom: 5px solid var(--dark-snow);
+}
+
+p > strong {
+  color: var(--primary);
 }
 
 .indented-heading {
   display: inline-block;
   margin-top: calc(var(--space-xs) * -1);
   margin-left: calc(var(--space-md) * -1);
+  margin-bottom: 0;
   padding: var(--space-xs) var(--space-md);
   background-color: var(--secondary-light);
   border-bottom: 5px solid var(--secondary-dark);
